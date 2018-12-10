@@ -3,22 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.5.1",
+    "@material-ui/icons": "^3.0.1",
+    "@types/graphql": "^14.0.3",
     "@types/jest": "^23.3.9",
     "@types/node": "^10.12.10",
     "@types/react": "^16.7.7",
     "@types/react-dom": "^16.0.10",
+    "@types/styled-components": "^4.1.1",
     "apollo-boost": "^0.1.22",
+    "apollo-cache": "^1.1.21",
+    "apollo-cache-inmemory": "^1.3.11",
     "apollo-client": "^2.4.7",
+    "apollo-link-context": "^1.0.10",
+    "apollo-link-http": "^1.5.7",
     "html-webpack-plugin": "^3.2.0",
     "jest-dom": "^2.1.1",
     "prettier": "^1.15.2",
     "react": "^16.6.3",
+    "react-apollo": "^2.3.1",
     "react-dom": "^16.6.3",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
     "react-testing-library": "^5.3.0",
     "styled-components": "^4.1.1",
+    "styled-components-ts": "0.0.14",
     "tslint": "^5.11.0",
     "typescript": "^3.1.6"
   },
@@ -26,7 +36,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "tslint 'src/**/*.{ts, tsx}'"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,7 +50,8 @@
   ],
   "devDependencies": {
     "awesome-typescript-loader": "^5.2.1",
-    "eslint-config-airbnb": "^17.1.0",
+    "graphql": "^14.0.2",
+    "graphql-tag": "^2.10.0",
     "source-map-loader": "^0.2.4",
     "tslint-config-prettier": "^1.16.0",
     "tslint-config-standard": "^8.0.1",
