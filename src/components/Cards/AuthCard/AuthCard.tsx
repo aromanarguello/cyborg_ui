@@ -1,9 +1,9 @@
-import { Button, Input, InputAdornment, withStyles } from '@material-ui/core';
-import { AccountCircle, Keyboard } from '@material-ui/icons';
-import React, { SFC } from 'react';
-import { Mutation } from 'react-apollo';
-import { LOGIN_MUTATION } from '../../../graphql/mutations';
-import { CardContainer, InnerCardContainer, SubmitRow } from './AuthCard.styles';
+import { Button, Input, InputAdornment } from '@material-ui/core'
+import { AccountCircle, Keyboard } from '@material-ui/icons'
+import React, { SFC } from 'react'
+import { Mutation } from 'react-apollo'
+import { LOGIN_MUTATION } from '../../../graphql/mutations'
+import { CardContainer, InnerCardContainer, SubmitRow } from './AuthCard.styles'
 
 interface AuthProps {
     token?: string
@@ -11,13 +11,17 @@ interface AuthProps {
     passwordPlaceholder: string
     emailInput: string
     passwordInput: string
+    emailOnChange: (e: any) => void
+    passwordOnChange: (e: any) => void
 }
 
 const AuthCard: SFC<AuthProps> = ({
     userNamePlaceholder,
     passwordPlaceholder,
     emailInput,
-    passwordInput
+    passwordInput,
+    emailOnChange,
+    passwordOnChange
 }) => (
     <Mutation mutation={LOGIN_MUTATION}>
         {login => (
@@ -25,27 +29,18 @@ const AuthCard: SFC<AuthProps> = ({
                 <InnerCardContainer>
                     <form
                         onSubmit={async e => {
-                            e.preventDefault();
-                            // const data: any;
+                            e.preventDefault()
                             const {
                                 data: {
-                                    login: {
-                                        token,
-                                        user: {
-                                            firstName,
-                                            middleName,
-                                            lastName,
-                                            email,
-                                            id
-                                        }
-                                    }
+                                    login: { token }
                                 }
                             }: any = await login({
                                 variables: {
                                     email: emailInput,
                                     password: passwordInput
                                 }
-                            });
+                            })
+                            if (token) console.log('Token')
                         }}
                         method="post"
                     >
@@ -54,8 +49,8 @@ const AuthCard: SFC<AuthProps> = ({
                             className="signInInput"
                             name="emailInput"
                             placeholder={userNamePlaceholder}
-                            // onChange={inputOnChange}
-                            // value={emailInput}
+                            onChange={emailOnChange}
+                            value={emailInput}
                             startAdornment={
                                 <InputAdornment position="start">
                                     <AccountCircle className="loginIcons" />
@@ -67,8 +62,8 @@ const AuthCard: SFC<AuthProps> = ({
                             name="passwordInput"
                             type="password"
                             placeholder={passwordPlaceholder}
-                            // value={passwordInput}
-                            // onChange={inputOnChange}
+                            value={passwordInput}
+                            onChange={passwordOnChange}
                             startAdornment={
                                 <InputAdornment position="start">
                                     <Keyboard className="loginIcons" />
@@ -89,6 +84,6 @@ const AuthCard: SFC<AuthProps> = ({
             </CardContainer>
         )}
     </Mutation>
-);
+)
 
-export default AuthCard;
+export default AuthCard

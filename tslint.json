@@ -26,7 +26,7 @@
         "prefer-readonly": true,
         "arrow-parens": [true, "ban-single-arg-parens"],
         "arrow-return-shorthand": [true, "multiline"],
-        "align": true,
+        "align": false,
         "jsx-self-close": true,
         "class-name": true,
         "interface-over-type-literal": true,
@@ -40,7 +40,8 @@
         "object-literal-shorthand": true,
         "no-implicit-dependencies": false,
         "indent": [true, "spaces", 4],
-        "jsx-no-lambda": false
+        "jsx-no-lambda": false,
+        "jsdoc-format": [true, "check-multiline-start"]
     },
     "rulesDirectory": []
 }
