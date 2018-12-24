@@ -1,15 +1,7 @@
 import React, { Component } from 'react'
-import { AuthCard } from '../index'
-import {
-    CardContainer,
-    InnerCardContainer,
-    SubmitRow
-} from './Crendentials.styles'
-
-// interface AppProps {
-//     token?: string
-//     onClick(e: MouseEvent<HTMLElement>): void
-// }
+import { withRouter } from 'react-router-dom'
+import { AuthCard } from '../../components/index'
+import { setSession } from '../../services'
 
 interface State {
     readonly userNamePlaceholder: string
@@ -46,6 +38,16 @@ class Credentials extends Component<any, State> {
         this.setState({ passwordInput: e.target.value })
     }
 
+    /**
+     * Sets session with token
+     * If successful, redirects user to home page
+     */
+    public authorizeUser = (token: string) => {
+        const { history } = this.props
+        if (token) setSession(token)
+        return history.push('/inicio')
+    }
+
     public render() {
         const {
             userNamePlaceholder,
@@ -61,6 +63,7 @@ class Credentials extends Component<any, State> {
                 passwordInput={passwordInput}
                 emailOnChange={this.emailOnChange}
                 passwordOnChange={this.passwordOnChange}
+                authorizeUser={this.authorizeUser}
             />
         )
     }

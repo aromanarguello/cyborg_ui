@@ -13,6 +13,7 @@ interface AuthProps {
     passwordInput: string
     emailOnChange: (e: any) => void
     passwordOnChange: (e: any) => void
+    authorizeUser: (token: string) => void
 }
 
 const AuthCard: SFC<AuthProps> = ({
@@ -21,7 +22,8 @@ const AuthCard: SFC<AuthProps> = ({
     emailInput,
     passwordInput,
     emailOnChange,
-    passwordOnChange
+    passwordOnChange,
+    authorizeUser
 }) => (
     <Mutation mutation={LOGIN_MUTATION}>
         {login => (
@@ -40,7 +42,7 @@ const AuthCard: SFC<AuthProps> = ({
                                     password: passwordInput
                                 }
                             })
-                            if (token) console.log('Token')
+                            authorizeUser(token)
                         }}
                         method="post"
                     >

@@ -1,7 +1,7 @@
 export const hasTokens = _ => sessionStorage.getItem('token');
 
 export const setSession = session => {
-    Object.keys(session).forEach(key => sessionStorage.setItem('token', session[key]));
+    sessionStorage.setItem('token', session)
 };
 
 export const signOut = _ => sessionStorage.clear();
