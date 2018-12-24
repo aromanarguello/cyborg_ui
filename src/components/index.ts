@@ -1,4 +1,5 @@
-import AuthCard from './Cards/AuthCard/AuthCard';
-import Credentials from './Credentials/Credentials.container';
+import { Auth } from './Auth/Auth'
+import AuthCard from './Cards/AuthCard/AuthCard'
+import SidePanel from './SidePanel/SidePanel.container'
 
-export { Credentials, AuthCard };
+export { AuthCard, SidePanel, Auth }
