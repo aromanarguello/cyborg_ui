@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { colors } from '../../utils/styles/helpers'
 
-const { darkNavy, white } = colors
+const { darkNavy, white, gradient: { lightPurple} } = colors
 
 const SidePanelContainer = styled.div`
     grid-row-start: 2;
@@ -32,7 +32,7 @@ const SidePanelItem = styled.li`
     &:focus,
     &:hover {
         cursor: pointer;
-        border-bottom: 1px solid ${white};
+        background: ${lightPurple};
     }
 `
 
@@ -41,6 +41,7 @@ const Icon = styled(FontAwesomeIcon)`
     display: flex;
     justify-items: center;
     margin: 0 auto;
+    font-size: 23px;
 `
 
 export { SidePanelContainer, SidePanelList, SidePanelItem, Icon}

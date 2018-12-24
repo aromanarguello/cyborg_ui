@@ -17,7 +17,7 @@ class SidePanel extends Component {
                     </SidePanelItem>
                     <SidePanelItem>
                         <Icon icon="notes-medical" />
-                        <div>Crear Orden</div>
+                        <div>Cotizacion</div>
                     </SidePanelItem>
                     <SidePanelItem>
                         <Icon icon="history" />
@@ -25,7 +25,7 @@ class SidePanel extends Component {
                     </SidePanelItem>
                     <SidePanelItem>
                         <Icon icon="cogs" />
-                        <div>Ajustes</div>
+                        <div>Configuracion</div>
                     </SidePanelItem>
                 </SidePanelList>
             </SidePanelContainer>
