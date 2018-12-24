@@ -18,7 +18,7 @@ const DashboardContainer = styled.div`
     margin: 0 auto;
     box-shadow: ${light};
     display: grid;
-    grid-template-rows: 100px 600px;
+    grid-template-rows: 70px 630px;
     grid-template-columns: 250px 950px;
 `
 
