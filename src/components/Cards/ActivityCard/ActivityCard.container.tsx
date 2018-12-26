@@ -1,13 +1,7 @@
 import { Line } from '@nivo/line'
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { colors } from '../../../utils/styles/helpers'
 import { Card, CardContainer, CardHeader } from '../Cards.styles'
-
-const {
-    green,
-    gradient: { lightPurple }
-} = colors
 
 const ChartContainer = styled.div`
     width: 100%;
@@ -16,7 +10,6 @@ const ChartContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding-top: 10px;
-    /* border-bottom: 1.5px solid rgba(158, 158, 158, 0.5); */
 `
 interface DataObject {
     x: string
