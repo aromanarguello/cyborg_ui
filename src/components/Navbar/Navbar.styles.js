@@ -4,7 +4,8 @@ import { colors } from '../../utils/styles/helpers'
 
 const {
     gradient: { lightPurple },
-    gray
+    gray,
+    shadows: { light }
 } = colors
 
 const NavbarContainer = styled.div`
@@ -12,6 +13,7 @@ const NavbarContainer = styled.div`
     grid-column: 1 / span 2;
     background: ${lightPurple};
     display: flex;
+    box-shadow: ${light};
     justify-content: space-between;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
         Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
