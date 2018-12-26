@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { OrderContent } from '../../../utils/TypeMaps/Types'
 import { Card, CardContainer, CardHeader } from '../Cards.styles'
+import { State } from './index'
 import {
     Chip,
     ChipContainer,
@@ -10,10 +10,6 @@ import {
     TableList,
     Text
 } from './OrderCard.styles'
-
-interface State {
-    orders: OrderContent[]
-}
 
 export default class OrderCard extends Component<any, State> {
     constructor(props: any) {

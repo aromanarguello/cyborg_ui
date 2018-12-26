@@ -1,29 +1,8 @@
 import { Line } from '@nivo/line'
 import React, { Component } from 'react'
-import styled from 'styled-components'
 import { Card, CardContainer, CardHeader } from '../Cards.styles'
-
-const ChartContainer = styled.div`
-    width: 100%;
-    height: 210px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10px;
-`
-interface DataObject {
-    x: string
-    y: number
-}
-
-interface DataProp {
-    id: string
-    data: DataObject[]
-}
-
-interface State {
-    data: DataProp[]
-}
+import { ChartContainer } from './ActivityCard.styles'
+import { State } from './index'
 
 class ActivityCard extends Component<any, State> {
     constructor(props: any) {
@@ -66,7 +45,7 @@ class ActivityCard extends Component<any, State> {
                                 tickPadding: 5,
                                 tickRotation: 0,
                                 format: () => null
-                              }}
+                            }}
                             axisBottom={{
                                 tickSize: 0,
                                 tickPadding: 0

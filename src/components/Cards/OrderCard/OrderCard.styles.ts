@@ -1,12 +1,6 @@
 import styled from 'styled-components'
 import { colors } from '../../../utils/styles/helpers'
-
-interface ItemProp {
-    index: number
-}
-interface StyledProps {
-    isComplete?: boolean
-}
+import { ItemProp, StyledProps } from './index'
 
 const { grey, green, red } = colors
 
