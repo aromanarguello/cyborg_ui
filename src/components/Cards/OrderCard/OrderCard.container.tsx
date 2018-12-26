@@ -1,28 +1,15 @@
 import React, { Component } from 'react'
+import { Card, CardContainer, CardHeader } from '../Cards.styles'
+import { State } from './index'
 import {
-    CardHeader,
     Chip,
     ChipContainer,
-    OrderCardContainer,
-    StyledOrderCard,
     Table,
     TableContainer,
     TableItem,
     TableList,
     Text
 } from './OrderCard.styles'
-
-interface OrderContent {
-    provider: string
-    price: number
-    isComplete: boolean
-    createdAt: string
-    patientName: string
-}
-
-interface State {
-    orders: OrderContent[]
-}
 
 export default class OrderCard extends Component<any, State> {
     constructor(props: any) {
@@ -105,8 +92,8 @@ export default class OrderCard extends Component<any, State> {
     public render() {
         const { orders } = this.state
         return (
-            <OrderCardContainer className="order-container">
-                <StyledOrderCard>
+            <CardContainer className="order-container" grid={2}>
+                <Card>
                     <CardHeader>
                         <p>Ordenes Recientes</p>
                     </CardHeader>
@@ -133,15 +120,15 @@ export default class OrderCard extends Component<any, State> {
                                             </ChipContainer>
                                             <Text>{createdAt}</Text>
                                             <Text>{patientName}</Text>
-                                            <Text>{price}</Text>
+                                            <Text>{price}$</Text>
                                         </TableItem>
                                     )
                                 )}
                             </TableList>
                         </Table>
                     </TableContainer>
-                </StyledOrderCard>
-            </OrderCardContainer>
+                </Card>
+            </CardContainer>
         )
     }
 }

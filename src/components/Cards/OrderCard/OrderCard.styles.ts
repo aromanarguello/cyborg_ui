@@ -1,53 +1,9 @@
 import styled from 'styled-components'
 import { colors } from '../../../utils/styles/helpers'
+import { ItemProp, StyledProps } from './index'
 
-interface ItemProp {
-    index: number
-}
-interface StyledProps {
-    isComplete?: boolean
-}
+const { grey, green, red } = colors
 
-const {
-    white,
-    gray,
-    grey,
-    green,
-    red,
-    shadows: { light }
-} = colors
-
-const OrderCardContainer = styled.div`
-    grid-column-start: 2;
-    grid-row-start: 1;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-`
-
-const StyledOrderCard = styled.div`
-    background-color: ${white};
-    height: 90%;
-    width: 90%;
-    box-shadow: ${light};
-    margin: 0;
-    display: inline-block;
-    border-radius: 12.5px;
-`
-
-const CardHeader = styled.div`
-    height: 50px;
-    color: ${gray};
-    letter-spacing: 1px;
-    p {
-        padding-left: 20px;
-        padding-top: 20px;
-    }
-`
 const TableContainer = styled.div`
     width: 100%;
     height: 180px;
@@ -92,8 +48,8 @@ const ChipContainer = styled.div`
 `
 
 const Chip = styled.p`
-    background-color: ${(props: StyledProps) =>
-        props.isComplete ? red : green};
+    background-color: ${({ isComplete }: StyledProps) =>
+        isComplete ? red : green};
     color: white;
     font-size: 12px;
     border-top-left-radius: 28.5px;
@@ -106,9 +62,6 @@ const Chip = styled.p`
 `
 
 export {
-    OrderCardContainer,
-    StyledOrderCard,
-    CardHeader,
     TableContainer,
     Table,
     TableList,
