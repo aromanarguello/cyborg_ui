@@ -8,6 +8,7 @@
     "@fortawesome/react-fontawesome": "^0.1.3",
     "@material-ui/core": "^3.5.1",
     "@material-ui/icons": "^3.0.1",
+    "@nivo/line": "^0.52.0",
     "@types/graphql": "^14.0.3",
     "@types/jest": "^23.3.9",
     "@types/node": "^10.12.10",
