@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { colors } from './utils/styles/helpers'
 
-const { white, shadows: { light } } = colors;
+const { white, shadows: { base } } = colors;
 
 const AppContainer = styled.div`
     width: 100vw;
@@ -16,7 +16,7 @@ const DashboardContainer = styled.div`
     background-color: ${white};
     grid-row-start: 2;
     margin: 0 auto;
-    box-shadow: ${light};
+    box-shadow: ${base};
     display: grid;
     grid-template-rows: 70px 630px;
     grid-template-columns: 250px 950px;
