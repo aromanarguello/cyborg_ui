@@ -9,6 +9,7 @@ const {
 
 interface GridProp {
     grid?: number
+    width?: number | undefined
 }
 
 const CardContainer = styled.div`
@@ -26,7 +27,8 @@ const CardContainer = styled.div`
 const Card = styled.div`
     background-color: ${white};
     height: 90%;
-    width: 90%;
+    width: ${({ width }: GridProp) =>
+        width !== undefined ? width + '%' : '90%'};
     box-shadow: ${light};
     margin: 0;
     display: inline-block;

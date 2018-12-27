@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { ActivityCard, OrderCard } from '../../components/index'
+import { ActivityCard, OrderCard, StatsCard } from '../../components/index'
 
 const HomeContainer = styled.div`
     width: 100%;
@@ -16,6 +16,7 @@ class Home extends Component {
             <HomeContainer>
                 <OrderCard />
                 <ActivityCard />
+                <StatsCard />
             </HomeContainer>
         )
     }
