@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {
     Icon,
+    Link,
     SidePanelContainer,
     SidePanelItem,
     SidePanelList
@@ -13,11 +14,11 @@ class SidePanel extends Component {
                 <SidePanelList>
                     <SidePanelItem>
                         <Icon icon="home" />
-                        <div>Inicio</div>
+                        <Link to="/inicio">Inicio</Link>
                     </SidePanelItem>
                     <SidePanelItem>
                         <Icon icon="notes-medical" />
-                        <div>Cotizacion</div>
+                        <Link to="/cotizacion">Cotizacion</Link>
                     </SidePanelItem>
                     <SidePanelItem>
                         <Icon icon="history" />

@@ -5,7 +5,7 @@ import { Mutation } from 'react-apollo'
 import { LOGIN_MUTATION } from '../../../graphql/mutations'
 import { CardContainer, InnerCardContainer, SubmitRow } from './AuthCard.styles'
 
-interface AuthProps {
+type AuthProps = {
     token?: string
     userNamePlaceholder: string
     passwordPlaceholder: string

@@ -1,12 +1,12 @@
 import { OrderContent } from '../../../utils/TypeMaps/Types'
 
-export interface ItemProp {
+export type ItemProp = {
     index: number
 }
-export interface StyledProps {
+export type StyledProps = {
     isComplete?: boolean
 }
 
-export interface State {
+export type State = {
     orders: OrderContent[]
 }

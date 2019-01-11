@@ -33,7 +33,7 @@ const Description = styled.p`
     color: ${grey};
 `
 
-interface StatProp {
+type StatProp = {
     value: number
     description: string
 }
