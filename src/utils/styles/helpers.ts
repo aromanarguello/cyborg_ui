@@ -2,19 +2,6 @@
  * Helper styles and themes for global usage
  */
 
-interface ColorProps {
-    white: string
-    gray: string
-    grey: string
-    green: string
-    red: string
-    shadows: ShadowProps
-}
-
-interface ShadowProps {
-    light: string
-}
-
 export const colors = {
     white: '#F5F6FD',
     blue: '#214BEE',

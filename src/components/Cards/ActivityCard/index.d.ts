@@ -1,13 +1,13 @@
-export interface DataObject {
+export type DataObject = {
     x: string
     y: number
 }
 
-export interface DataProp {
+export type DataProp = {
     id: string
     data: DataObject[]
 }
 
-export interface State {
+export type State = {
     data: DataProp[]
 }

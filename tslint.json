@@ -29,7 +29,7 @@
         "align": false,
         "jsx-self-close": true,
         "class-name": true,
-        "interface-over-type-literal": true,
+        "interface-over-type-literal": false,
         "interface-name": [true, "never-prefix"],
         "no-boolean-literal-compare": true,
         "no-consecutive-blank-lines": true,

@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom'
 import { AuthCard } from '../../components/index'
 import { setSession } from '../../services'
 
-interface State {
+type State = {
     readonly userNamePlaceholder: string
     readonly passwordPlaceholder: string
     readonly emailInput: string

@@ -1,4 +1,4 @@
-export interface OrderContent {
+export type OrderContent = {
     provider: string
     price: number
     isComplete: boolean

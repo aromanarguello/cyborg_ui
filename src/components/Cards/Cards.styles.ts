@@ -7,7 +7,7 @@ const {
     shadows: { light }
 } = colors
 
-interface GridProp {
+type GridProp = {
     grid?: number
     width?: number | undefined
 }

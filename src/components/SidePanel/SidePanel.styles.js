@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { colors } from '../../utils/styles/helpers'
+import {NavLink} from 'react-router-dom'
 
 const { darkNavy, white, gradient: { lightPurple} } = colors
 
@@ -44,4 +45,13 @@ const Icon = styled(FontAwesomeIcon)`
     font-size: 23px;
 `
 
-export { SidePanelContainer, SidePanelList, SidePanelItem, Icon}
+const Link = styled(NavLink)`
+    &:focus, &:visited {
+        text-decoration: none;
+        color: ${white};
+    }
+    color: ${white};
+    text-decoration: none;
+`
+
+export { SidePanelContainer, SidePanelList, SidePanelItem, Icon, Link}
