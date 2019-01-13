@@ -3,14 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { colors } from '../../utils/styles/helpers'
 import {NavLink} from 'react-router-dom'
 
-const { darkNavy, white, gradient: { lightPurple} } = colors
+const { pastelBlue, white, gradient: { lightPurple} } = colors
 
 const SidePanelContainer = styled.div`
     grid-row-start: 2;
     grid-column-start: 1;
     width: 100%;
     height: 100%;
-    background-color: ${darkNavy};
+    background-color: ${pastelBlue};
 `
 
 const SidePanelList = styled.ul`

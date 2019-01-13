@@ -3,15 +3,15 @@ import styled from 'styled-components'
 import { colors } from '../../utils/styles/helpers'
 
 const {
-    gradient: { lightPurple },
-    gray,
-    shadows: { light }
+    shadows: { light },
+    darkNavy,
+    cloudGray
 } = colors
 
 const NavbarContainer = styled.div`
     width: 100%;
     grid-column: 1 / span 2;
-    background: ${lightPurple};
+    background: ${darkNavy};
     display: flex;
     box-shadow: ${light};
     justify-content: space-between;
@@ -36,7 +36,7 @@ const Logo = styled.div`
 const UserInfo = styled.div`
     width: 250px;
     height: 100%;
-    color: ${gray};
+    color: ${cloudGray};
     display: flex;
     align-items: center;
     .user-icon {

@@ -14,7 +14,7 @@ const SearchBarContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin: 20px 10px 0 0;
+    margin: 20px 10px 10px 0;
 `
 const SearchBarInput = styled.input`
     width: 350px;
