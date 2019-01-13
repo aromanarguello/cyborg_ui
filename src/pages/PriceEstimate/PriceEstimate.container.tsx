@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
+import React, { SFC, useState } from 'react'
 import styled from 'styled-components'
+import { SearchBar } from '../../components/index'
 
 const PriceEstimateContainer = styled.div`
     display: grid;
@@ -7,10 +8,18 @@ const PriceEstimateContainer = styled.div`
     grid-template-rows: repeat(2, 1fr);
 `
 
-class PriceEstimate extends Component {
-    public render() {
-        return <PriceEstimateContainer />
+const PriceEstimate: SFC<any> = () => {
+    const [searchInput, SetSearchInput] = useState('')
+
+    const setInput = ({ target: { value } }: { target: { value: string } }) => {
+        SetSearchInput(value)
     }
+
+    return (
+        <PriceEstimateContainer>
+            <SearchBar setInput={setInput} />
+        </PriceEstimateContainer>
+    )
 }
 
 export default PriceEstimate
