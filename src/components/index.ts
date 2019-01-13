@@ -5,6 +5,7 @@ import OrderCard from './Cards/OrderCard/OrderCard.container'
 import StatsCard from './Cards/StatsCard/StatsCard.container'
 import Navbar from './Navbar/Navbar.component'
 import PieChart from './PieChart/PieChart.component'
+import SearchBar from './SearchBar/SearchBar.component'
 import SidePanel from './SidePanel/SidePanel.container'
 import StatNumbers from './StatNumbers/StatNumbers.component'
 
@@ -17,5 +18,6 @@ export {
     ActivityCard,
     StatsCard,
     StatNumbers,
-    PieChart
+    PieChart,
+    SearchBar
 }
