@@ -1,13 +1,19 @@
 import React, { SFC } from 'react'
-import styled from 'styled-components'
+import { Card, ItemDescription, ItemName, ItemPrice } from './ItemCard.styles'
 
-const Card = styled.div`
-    width: 400px;
-    height: 45px;
-    border: 1px solid red;
-    margin: 10px;
-`
+type DataProp = {
+    name: string
+    price: number
+    description: string
+    setPrice: (e: any) => void
+}
 
-const ItemCard: SFC<any> = () => <Card />
+const ItemCard: SFC<DataProp> = ({ name, price, description, setPrice }) => (
+    <Card onClick={setPrice}>
+        <ItemName>{name}</ItemName>
+        <ItemDescription>{description}</ItemDescription>
+        <ItemPrice>{`${price}`}$</ItemPrice>
+    </Card>
+)
 
 export default ItemCard

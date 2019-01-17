@@ -4,11 +4,13 @@ import AuthCard from './Cards/AuthCard/AuthCard'
 import ItemCard from './Cards/ItemCard/ItemCard.component'
 import OrderCard from './Cards/OrderCard/OrderCard.container'
 import StatsCard from './Cards/StatsCard/StatsCard.container'
+import TotalCard from './Cards/TotalCard/TotalCard.component'
 import Navbar from './Navbar/Navbar.component'
 import PieChart from './PieChart/PieChart.component'
 import SearchBar from './SearchBar/SearchBar.component'
 import SidePanel from './SidePanel/SidePanel.container'
 import StatNumbers from './StatNumbers/StatNumbers.component'
+
 export {
     AuthCard,
     SidePanel,
@@ -20,5 +22,6 @@ export {
     StatNumbers,
     PieChart,
     SearchBar,
-    ItemCard
+    ItemCard,
+    TotalCard
 }
