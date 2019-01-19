@@ -1,18 +1,26 @@
 import React, { SFC } from 'react'
-import { Card, ItemDescription, ItemName, ItemPrice } from './ItemCard.styles'
+import { Card, Icon, ItemName, ItemPrice, IconWrapper } from './ItemCard.styles'
 
 type DataProp = {
     name: string
     price: number
-    description: string
     setPrice: (e: any) => void
 }
 
-const ItemCard: SFC<DataProp> = ({ name, price, description, setPrice }) => (
-    <Card onClick={setPrice}>
+const ItemCard: SFC<DataProp> = ({ name, price, setPrice }) => (
+    <Card name={name} value={price}>
         <ItemName>{name}</ItemName>
-        <ItemDescription>{description}</ItemDescription>
         <ItemPrice>{`${price}`}$</ItemPrice>
+        <IconWrapper name={name} value={price}>
+            <Icon
+                icon="plus"
+                name={name + ' ' + price + '$'}
+                value={price}
+                onClick={setPrice}
+            >
+                +
+            </Icon>
+        </IconWrapper>
     </Card>
 )
 

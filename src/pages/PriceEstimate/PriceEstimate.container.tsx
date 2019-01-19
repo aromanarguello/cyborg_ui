@@ -6,53 +6,52 @@ const fakeData = [
     {
         name: 'Glucosa',
         price: 12,
-        description: 'La glucosa indica sus niveles de azucar en la sangre'
+        icon: 'fas fa-plus'
     },
     {
         name: 'Biometria Hematica',
         price: 12,
-        description:
-            'datos de tres tipos de células sanguíneas: glóbulos rojos, glóbulos blancos, plaquetas.'
+        icon: 'fas fa-plus'
     },
     {
         name: 'Glucosa',
         price: 12,
-        description: 'La glucosa indica sus niveles'
+        icon: 'fas fa-plus'
     },
     {
         name: 'Glucosa',
         price: 12,
-        description: 'La glucosa indica sus niveles'
+        icon: 'fas fa-plus'
     },
     {
         name: 'TSH',
         price: 5.5,
-        description: 'Mide Funcion Hormanal de Tiroides'
+        icon: 'fas fa-plus'
     },
     {
         name: 'T3 - libre',
         price: 17,
-        description: 'Mide Funcion Hormanal de Tiroides'
+        icon: 'fas fa-plus'
     },
     {
         name: 'PSA',
         price: 27,
-        description: 'Examen de prostata'
+        icon: 'fas fa-plus'
     },
     {
         name: 'Glico Hemoglobina',
         price: 17,
-        description: 'Mide los niveles de azucar en los eritocitros'
+        icon: 'fas fa-plus'
     },
     {
         name: 'LabScan-26',
         price: 32.23,
-        description: 'Examen de 26 Marcadores tumorales'
+        icon: 'fas fa-plus'
     },
     {
         name: 'HDL',
         price: 17,
-        description: 'Mide el colesterol bajo'
+        icon: 'fas fa-plus'
     }
 ]
 
@@ -82,27 +81,28 @@ const SearchBarContainer = styled.div`
 
 const PriceEstimate: SFC<any> = () => {
     const [searchInput, SetSearchInput] = useState('')
+    const [item, setItem] = useState([String()])
 
     const setInput = ({ target: { value } }: { target: { value: string } }) => {
         SetSearchInput(value)
     }
 
-    const setPrice = (e: any) => console.log(e.target)
+    const createItemList = (e: any) =>
+        setItem([...item, `${e.target.getAttribute('name')}`])
 
     return (
         <PriceEstimateContainer>
             <SearchBarContainer>
                 <SearchBar setInput={setInput} />
-                <TotalCard />
+                <TotalCard itemList={item} />
             </SearchBarContainer>
             <ItemContainer className="container">
-                {fakeData.map(({ name, price, description }) => (
+                {fakeData.map(({ name, price }, index) => (
                     <ItemCard
-                    onClick={}
                         name={name}
                         price={price}
-                        description={description}
-                        setPrice={setPrice}
+                        setPrice={createItemList}
+                        key={index}
                     />
                 ))}
             </ItemContainer>

@@ -1,12 +1,17 @@
 import styled from 'styled-components'
 import { colors } from '../../../utils/styles/helpers'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const {
     shadows: { light },
     turqouise
 } = colors
 
-const Card = styled.div`
+type IconProp = {
+    name: string
+    value: number
+}
+
+const Card: any = styled.div`
     width: 400px;
     height: 55px;
     margin: 5px 10px;
@@ -22,24 +27,23 @@ const Card = styled.div`
         Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `
 
-const ItemName = styled.h5`
+const ItemName: any = styled.h5`
     width: 78px;
     margin: 0 10px 0 0;
 `
 
-const ItemPrice = styled.h1`
+const ItemPrice: any = styled.h1`
     margin: 0;
     display: inline-block;
     align-self: center;
     color: ${turqouise};
 `
 
-const ItemDescription = styled.p`
-    align-self: center;
-    font-size: 10px;
-    width: 150px;;
-    margin: 0;
-    display: block;
-    text-align: start;
+const Icon: any = styled.p`
+    color: red;
+    font-size: 32px;
+    cursor: pointer;
 `
-export { Card, ItemName, ItemPrice, ItemDescription }
+
+const IconWrapper: any = styled.div``
+export { Card, ItemName, ItemPrice, Icon, IconWrapper }

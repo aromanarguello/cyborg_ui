@@ -5,7 +5,8 @@ import {
     faHistory,
     faHome,
     faNotesMedical,
-    faUserCircle
+    faUserCircle,
+    faPlus
 } from '@fortawesome/free-solid-svg-icons'
 import React, { SFC } from 'react'
 import { ApolloProvider } from 'react-apollo'
@@ -16,7 +17,15 @@ import { client } from './graphql/client'
 import { Credentials, Home, PriceEstimate } from './pages'
 import { GlobalStyle } from './utils/styles/global'
 
-library.add(faCogs, faHistory, faHome, faNotesMedical, faFlask, faUserCircle)
+library.add(
+    faCogs,
+    faHistory,
+    faHome,
+    faNotesMedical,
+    faFlask,
+    faUserCircle,
+    faPlus
+)
 
 const App: SFC<any> = () => (
     <Router>
