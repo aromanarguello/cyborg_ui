@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "cyborg_ui",
   "version": "0.1.0",
   "private": true,
@@ -39,26 +38,13 @@
     "styled-components-ts": "0.0.14",
     "tslint": "^5.11.0",
     "typescript": "^3.1.6"
-=======
-  "name": "pp",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.6.1",
-    "react-dom": "^16.6.1",
-    "react-scripts": "2.1.1"
->>>>>>> 4c0f6ea09d138e26d20397d10fb9c4144d323ee0
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-<<<<<<< HEAD
     "eject": "react-scripts eject",
     "lint": "tslint 'src/**/*.{ts, tsx}'"
-=======
-    "eject": "react-scripts eject"
->>>>>>> 4c0f6ea09d138e26d20397d10fb9c4144d323ee0
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -68,7 +54,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-<<<<<<< HEAD
   ],
   "devDependencies": {
     "awesome-typescript-loader": "^5.2.1",
@@ -79,7 +64,4 @@
     "tslint-config-standard": "^8.0.1",
     "tslint-react": "^3.6.0"
   }
-=======
-  ]
->>>>>>> 4c0f6ea09d138e26d20397d10fb9c4144d323ee0
 }

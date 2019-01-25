@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { ActivityCard, OrderCard, StatsCard } from '../../components/index'
 
 const HomeContainer = styled.div`
-    width: 100%;
+    width: 900 px;
     height: 700px;
     display: flex;
     justify-content: space-around;
