@@ -4,20 +4,26 @@ import { ActivityCard, OrderCard, StatsCard } from '../../components/index'
 
 const HomeContainer = styled.div`
     width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    height: 700px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+`
+const BringUp = styled.div`
+    margin: -170px auto 0 auto;
 `
 
 class Home extends Component {
     public render() {
         return (
-            <HomeContainer>
-                <OrderCard />
-                <ActivityCard />
-                <StatsCard />
-            </HomeContainer>
+            <BringUp>
+                <HomeContainer className="home">
+                    <ActivityCard />
+                    <OrderCard />
+                    <StatsCard />
+                </HomeContainer>
+            </BringUp>
         )
     }
 }

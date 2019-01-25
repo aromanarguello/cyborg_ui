@@ -25,14 +25,14 @@ class ActivityCard extends Component<any, State> {
     public render() {
         const { data } = this.state
         return (
-            <CardContainer grid={1}>
+            <CardContainer width={700}>
                 <Card>
                     <CardHeader>
                         <p>Utimos 5 dias</p>
                     </CardHeader>
                     <ChartContainer>
                         <Line
-                            width={400}
+                            width={500}
                             height={230}
                             margin={{
                                 top: 20,

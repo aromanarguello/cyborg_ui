@@ -5,6 +5,7 @@ import ItemCard from './Cards/ItemCard/ItemCard.component'
 import OrderCard from './Cards/OrderCard/OrderCard.container'
 import StatsCard from './Cards/StatsCard/StatsCard.container'
 import TotalCard from './Cards/TotalCard/TotalCard.component'
+import StaticExpansionPanel from './Expansions/StaticExpansion/StaticExpansion.component'
 import Navbar from './Navbar/Navbar.component'
 import PieChart from './PieChart/PieChart.component'
 import SearchBar from './SearchBar/SearchBar.component'
@@ -23,5 +24,6 @@ export {
     PieChart,
     SearchBar,
     ItemCard,
-    TotalCard
+    TotalCard,
+    StaticExpansionPanel
 }

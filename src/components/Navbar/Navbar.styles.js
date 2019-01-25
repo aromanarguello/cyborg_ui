@@ -10,6 +10,7 @@ const {
 
 const NavbarContainer = styled.div`
     width: 100%;
+    height: 80px;
     grid-column: 1 / span 2;
     background: ${darkNavy};
     display: flex;

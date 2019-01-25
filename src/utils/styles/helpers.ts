@@ -6,6 +6,7 @@ export const colors = {
     white: '#F5F6FD',
     blue: '#214BEE',
     darkNavy: '#04264C',
+    darkNavyTwo: '#04264c',
     lightPurpleOne: '#A9A7EB',
     lightPurpleTwo: '#7D74AF',
     gray: '#54575E',

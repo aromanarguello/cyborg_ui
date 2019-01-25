@@ -2,21 +2,17 @@ import styled from 'styled-components'
 import { colors } from '../../utils/styles/helpers'
 
 const {
-    white,
-    gray,
+    darkNavyTwo,
     shadows: { light }
 } = colors
 
-type GridProp = {
-    grid?: number
-    width?: number | undefined
+type CardProp = {
+    width?: number
 }
 
 const CardContainer = styled.div`
-    grid-column-start: ${({ grid }: GridProp) => grid};
-    grid-row-start: 1;
-    width: 100%;
-    height: 100%;
+    width: ${({ width }: CardProp) => `${width}px`};
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,9 +21,9 @@ const CardContainer = styled.div`
 `
 
 const Card = styled.div`
-    background-color: ${white};
+    background-color: #ffffff;
     height: 90%;
-    width: ${({ width }: GridProp) =>
+    width: ${({ width }: CardProp) =>
         width !== undefined ? width + '%' : '90%'};
     box-shadow: ${light};
     margin: 0;
@@ -37,9 +33,10 @@ const Card = styled.div`
 
 const CardHeader = styled.div`
     height: 50px;
-    color: ${gray};
+    color: ${darkNavyTwo};
     letter-spacing: 1px;
     p {
+        font-size: 23px;
         padding-left: 20px;
         padding-top: 20px;
     }

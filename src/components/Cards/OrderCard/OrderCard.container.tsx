@@ -92,7 +92,7 @@ export default class OrderCard extends Component<any, State> {
     public render() {
         const { orders } = this.state
         return (
-            <CardContainer className="order-container" grid={2}>
+            <CardContainer className="order-container" width={500}>
                 <Card>
                     <CardHeader>
                         <p>Ordenes Recientes</p>
