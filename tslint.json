@@ -1,47 +1,47 @@
 {
-    "defaultSeverity": "error",
-    "extends": ["tslint:latest", "tslint-config-prettier", "tslint-react"],
-    "linterOptions": {
-        "exclude": [
-            "node_modules",
-            "src/generated"
-        ]
-    },
-    "jsRules": {},
-    "rules": {
-        "trailing-comma": [true, {
-            "multiline": "never",
-            "singleline": "never"
-        }],
-        "curly": [true, "as-needed"],
-        "semicolon": [true, "never", "ignore-interfaces"],
-        "max-line-length": [true, 120],
-        "ordered-imports": true,
-        "object-literal-sort-keys": false,
-        "eofline": true,
-        "no-duplicate-imports": true,
-        "jsx-no-multiline-js": false,
-        "no-require-imports": true,
-        "prefer-const": true,
-        "prefer-readonly": true,
-        "arrow-parens": [true, "ban-single-arg-parens"],
-        "arrow-return-shorthand": [true, "multiline"],
-        "align": false,
-        "jsx-self-close": true,
-        "class-name": true,
-        "interface-over-type-literal": false,
-        "interface-name": [true, "never-prefix"],
-        "no-boolean-literal-compare": true,
-        "no-consecutive-blank-lines": true,
-        "no-irregular-whitespace": true,
-        "no-trailing-whitespace": true,
-        "no-unnecessary-initializer": true,
-        "object-literal-key-quotes": [true, "as-needed"],
-        "object-literal-shorthand": true,
-        "no-implicit-dependencies": false,
-        "indent": [true, "spaces", 4],
-        "jsx-no-lambda": false,
-        "jsdoc-format": [true, "check-multiline-start"]
-    },
-    "rulesDirectory": []
+  "defaultSeverity": "error",
+  "extends": ["tslint:latest", "tslint-config-prettier", "tslint-react"],
+  "linterOptions": {
+    "exclude": ["node_modules", "src/generated"]
+  },
+  "jsRules": {},
+  "rules": {
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "never",
+        "singleline": "never"
+      }
+    ],
+    "curly": [true, "as-needed"],
+    "semicolon": [true, "never", "ignore-interfaces"],
+    "max-line-length": [true, 120],
+    "ordered-imports": true,
+    "object-literal-sort-keys": false,
+    "eofline": true,
+    "no-duplicate-imports": true,
+    "jsx-no-multiline-js": false,
+    "no-require-imports": true,
+    "prefer-const": true,
+    "prefer-readonly": true,
+    "arrow-parens": [true, "ban-single-arg-parens"],
+    "arrow-return-shorthand": [true, "multiline"],
+    "align": false,
+    "jsx-self-close": true,
+    "class-name": true,
+    "interface-over-type-literal": false,
+    "interface-name": [true, "never-prefix"],
+    "no-boolean-literal-compare": true,
+    "no-consecutive-blank-lines": true,
+    "no-irregular-whitespace": true,
+    "no-trailing-whitespace": true,
+    "no-unnecessary-initializer": true,
+    "object-literal-key-quotes": [true, "as-needed"],
+    "object-literal-shorthand": true,
+    "no-implicit-dependencies": false,
+    "indent": [true, "spaces", 4],
+    "jsx-no-lambda": false,
+    "jsdoc-format": [true, "check-multiline-start"]
+  },
+  "rulesDirectory": []
 }
