@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 const StatsContainer = styled.div`
-    grid-column-start: 1;
-    grid-row-start: 2;
-    grid-column: 1 / span 2;
+    width: 600px;
 `
 
 const NumberContainer = styled.div`

@@ -8,10 +8,16 @@ const {
 
 type CardProp = {
     width?: number
+    column?: number
+    row?: number
+    columnSpan?: string
 }
 
 const CardContainer = styled.div`
     width: ${({ width }: CardProp) => `${width}px`};
+    grid-column-start: ${({ column }: CardProp) => column};
+    grid-row-start: ${({ row }: CardProp) => row};
+    grid-row: ${({ columnSpan }: CardProp) => columnSpan};
     height: 300px;
     display: flex;
     justify-content: center;
