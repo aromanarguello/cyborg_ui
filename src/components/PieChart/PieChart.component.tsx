@@ -18,19 +18,14 @@ const PieChart: SFC<PieChartProp> = ({ chartData = [] }) => (
                     bottom: 120,
                     left: 80
                 }}
-                innerRadius={0.5}
-                padAngle={0.7}
-                cornerRadius={3}
-                colors="purple_blue_green"
-                colorBy="id"
-                borderWidth={1}
-                borderColor="inherit:darker(0.2)"
-                enableRadialLabels={false}
-                slicesLabelsSkipAngle={10}
-                slicesLabelsTextColor="#333333"
                 animate={true}
-                motionStiffness={90}
-                motionDamping={15}
+                innerRadius={0.6}
+                colors="blues"
+                padAngle={0.5}
+                cornerRadius={5}
+                radialLabelsLinkColor="inherit"
+                radialLabelsLinkStrokeWidth={3}
+                radialLabelsTextColor="inherit:darker(1.2)"
             />
         </PieChartContainer>
         <Description>Detalle de Ordenes</Description>

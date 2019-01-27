@@ -18,7 +18,13 @@ const ActivityCard = () => {
     ])
 
     return (
-        <CardContainer width={700} column={2} row={1}>
+        <CardContainer
+            width={700}
+            column={2}
+            row={1}
+            className="cardContainer"
+            justifyContent="flex-start"
+        >
             <Card>
                 <CardHeader>
                     <p>Utimos 5 dias</p>

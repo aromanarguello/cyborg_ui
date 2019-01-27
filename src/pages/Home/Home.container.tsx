@@ -3,12 +3,11 @@ import styled from 'styled-components'
 import {
     ActivityCard,
     OrderCard,
-    StatsCard,
-    ProfileCard
+    ProfileCard,
+    StatsCard
 } from '../../components/index'
 
 const HomeContainer = styled.div`
-    border: 1px solid;
     width: 1200px;
     height: 100%;
     display: grid;
@@ -16,9 +15,10 @@ const HomeContainer = styled.div`
     grid-template-rows: repeat(2, 300px);
     margin: 0 auto;
     padding: 70px;
+    justify-content: center;
 `
 const BringUp = styled.div`
-    margin: -170px auto 0 auto;
+    margin: -220px auto 0 auto;
 `
 
 class Home extends Component {
