@@ -11,6 +11,8 @@ type CardProp = {
     column?: number
     row?: number
     columnSpan?: string
+    marginRight?: string
+    justifyContent?: string
 }
 
 const CardContainer = styled.div`
@@ -20,10 +22,11 @@ const CardContainer = styled.div`
     grid-row: ${({ columnSpan }: CardProp) => columnSpan};
     height: 300px;
     display: flex;
-    justify-content: center;
+    justify-content: ${({ justifyContent = 'center' }) => justifyContent};
     align-items: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
         Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-right: ${({ marginRight }: CardProp) => marginRight};
 `
 
 const Card = styled.div`

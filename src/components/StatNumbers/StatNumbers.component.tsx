@@ -15,6 +15,7 @@ const StatContainer = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 `
 
 const Stats = styled.p`

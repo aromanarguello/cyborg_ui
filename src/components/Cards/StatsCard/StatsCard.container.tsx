@@ -41,7 +41,7 @@ class StatsCard extends Component<any, State> {
         }: any = this.state
         return (
             <StatsContainer>
-                <CardContainer>
+                <CardContainer width={664} justifyContent="flex-start">
                     <Card width={95}>
                         <NumberContainer>
                             <StatNumbers

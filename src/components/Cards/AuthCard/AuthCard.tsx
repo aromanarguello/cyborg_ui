@@ -1,6 +1,6 @@
+import React, { SFC } from 'react'
 import { Button, Input, InputAdornment } from '@material-ui/core'
 import { AccountCircle, Keyboard } from '@material-ui/icons'
-import React, { SFC } from 'react'
 import { Mutation } from 'react-apollo'
 import { LOGIN_MUTATION } from '../../../graphql/mutations'
 import { CardContainer, InnerCardContainer, SubmitRow } from './AuthCard.styles'

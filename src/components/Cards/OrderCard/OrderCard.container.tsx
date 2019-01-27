@@ -110,7 +110,7 @@ export default class OrderCard extends Component<any, State> {
                                         },
                                         i
                                     ) => (
-                                        <TableItem index={i}>
+                                        <TableItem key={i} index={i}>
                                             <ChipContainer>
                                                 <Chip isComplete={isComplete}>
                                                     {isComplete

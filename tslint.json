@@ -2,21 +2,21 @@
     "defaultSeverity": "error",
     "extends": ["tslint:latest", "tslint-config-prettier", "tslint-react"],
     "linterOptions": {
-        "exclude": [
-            "node_modules",
-            "src/generated"
-        ]
+        "exclude": ["node_modules", "src/generated"]
     },
     "jsRules": {},
     "rules": {
-        "trailing-comma": [true, {
-            "multiline": "never",
-            "singleline": "never"
-        }],
+        "trailing-comma": [
+            true,
+            {
+                "multiline": "never",
+                "singleline": "never"
+            }
+        ],
         "curly": [true, "as-needed"],
         "semicolon": [true, "never", "ignore-interfaces"],
         "max-line-length": [true, 120],
-        "ordered-imports": true,
+        "ordered-imports": false,
         "object-literal-sort-keys": false,
         "eofline": true,
         "no-duplicate-imports": true,
