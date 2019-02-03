@@ -1,47 +1,20 @@
 import React, { SFC } from 'react'
 import { Card, CardContainer } from '../Cards.styles'
-import styled from 'styled-components'
-import { colors } from '../../../utils/styles/helpers'
+
 import HeadShot from '../../../assets/images/headshot.jpg'
 import { USER_QUERY } from '../../../graphql/queries'
 import { Query } from 'react-apollo'
 import { PulseLoader } from 'react-spinners'
 
+import {
+    Main,
+    InnerContainer,
+    ProfileImage,
+    UserInfo
+} from './ProfileCard.styles.js'
+import { colors } from '../../../utils/styles/helpers'
+
 const { pastelBlue, darkNavy } = colors
-
-const Main = styled.div`
-    padding: 15px 0 20px 0;
-    margin: 20px 0 0 20px;
-    display: inline-block;
-`
-const InnerContainer = styled.div`
-    width: 100%;
-
-    display: flex;
-    flex-direction: row;
-`
-
-const ProfileImage = styled.img`
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    display: inline-block;
-`
-const UserInfo = styled.div`
-    width: 200px;
-    height: 200px;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
-    text-align: start;
-
-    p {
-        margin: 5px 0;
-        font-weight: 500;
-        color: ${pastelBlue};
-    }
-`
 
 const ProfileCard: SFC<any> = () => (
     <CardContainer width={500}>
@@ -65,11 +38,11 @@ const ProfileCard: SFC<any> = () => (
                             </UserInfo>
                         ) : (
                             <UserInfo>
-                                <p>{`Dr, ${fetchUser.user.firstName} ${
-                                    fetchUser.user.lastName
+                                <p>{`Dr, ${fetchUser.firstName} ${
+                                    fetchUser.lastName
                                 }`}</p>
-                                <p>{fetchUser.user.specialty}</p>
-                                <p>{fetchUser.id}</p>
+                                <p>{fetchUser.specialty}</p>
+                                <p>{fetchUser.guId}</p>
                             </UserInfo>
                         )
                     }
