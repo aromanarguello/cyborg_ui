@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components'
 import { colors } from '../../utils/styles/helpers'
+import { NavLink } from 'react-router-dom'
 
 const {
     shadows: { light },
@@ -49,4 +50,19 @@ const Icon = styled(FontAwesomeIcon)`
     padding-left: 20px;
 `
 
-export { NavbarContainer, Logo, Icon, UserInfo }
+const MenuContainer = styled.div`
+    width: 400px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+`
+
+const Links = styled(NavLink)`
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    margin: 23px 10px;
+`
+
+export { NavbarContainer, Logo, Icon, UserInfo, MenuContainer, Links }

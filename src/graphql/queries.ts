@@ -3,14 +3,12 @@ import gql from 'graphql-tag'
 export const USER_QUERY = gql`
     query fetchUser($email: String!) {
         fetchUser(email: $email) {
-            id
-            user {
-                firstName
-                lastName
-                middleName
-                email
-                specialty
-            }
+            firstName
+            lastName
+            middleName
+            email
+            specialty
+            guId
         }
     }
 `
