@@ -7,7 +7,7 @@ import { USER_QUERY } from '../../../graphql/queries'
 import { Query } from 'react-apollo'
 import { PulseLoader } from 'react-spinners'
 
-const { pastelBlue } = colors
+const { pastelBlue, darkNavy } = colors
 
 const Main = styled.div`
     padding: 15px 0 20px 0;
@@ -31,7 +31,16 @@ const UserInfo = styled.div`
     width: 200px;
     height: 200px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+
+    p {
+        margin: 5px 0;
+        font-weight: 500;
+        color: ${pastelBlue};
+    }
 `
 
 const ProfileCard: SFC<any> = () => (
@@ -45,7 +54,7 @@ const ProfileCard: SFC<any> = () => (
                     query={USER_QUERY}
                     variables={{ email: 'test@test.com' }}
                 >
-                    {({ data, loading }) =>
+                    {({ data: { fetchUser }, loading }) =>
                         loading ? (
                             <UserInfo>
                                 <PulseLoader
@@ -56,11 +65,11 @@ const ProfileCard: SFC<any> = () => (
                             </UserInfo>
                         ) : (
                             <UserInfo>
-                                <p>
-                                    {`Dr, ${data.fetchUser.firstName} ${
-                                        data.fetchUser.lastName
-                                    }`}
-                                </p>
+                                <p>{`Dr, ${fetchUser.user.firstName} ${
+                                    fetchUser.user.lastName
+                                }`}</p>
+                                <p>{fetchUser.user.specialty}</p>
+                                <p>{fetchUser.id}</p>
                             </UserInfo>
                         )
                     }
