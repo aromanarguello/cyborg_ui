@@ -3,7 +3,8 @@ import { ItemCard, SearchBar, TotalCard } from '../../components/index'
 import {
     ItemContainer,
     PriceEstimateContainer,
-    SearchBarContainer
+    SearchBarContainer,
+    BringUp
 } from './PriceEstimate.styles'
 
 const fakeData = [
@@ -78,22 +79,24 @@ const PriceEstimate: SFC<any> = () => {
         setItem([...item, `${e.target.getAttribute('name')}`])
 
     return (
-        <PriceEstimateContainer>
-            <SearchBarContainer>
-                <SearchBar setInput={setInput} />
+        <BringUp>
+            <PriceEstimateContainer className="priceEstimate">
+                <SearchBarContainer>
+                    <SearchBar setInput={setInput} />
+                </SearchBarContainer>
+                <ItemContainer className="container">
+                    {fakeData.map(({ name, price }, index) => (
+                        <ItemCard
+                            name={name}
+                            price={price}
+                            setPrice={createItemList}
+                            key={index}
+                        />
+                    ))}
+                </ItemContainer>
                 <TotalCard itemList={item} />
-            </SearchBarContainer>
-            <ItemContainer className="container">
-                {fakeData.map(({ name, price }, index) => (
-                    <ItemCard
-                        name={name}
-                        price={price}
-                        setPrice={createItemList}
-                        key={index}
-                    />
-                ))}
-            </ItemContainer>
-        </PriceEstimateContainer>
+            </PriceEstimateContainer>
+        </BringUp>
     )
 }
 

@@ -9,7 +9,7 @@ const {
 const SearchBarContainer = styled.div`
     grid-row-start: 1;
     grid-column-start: 1;
-    width: 400px;
+    width: 100%;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -18,7 +18,7 @@ const SearchBarContainer = styled.div`
     padding: 0 0 20px 0;
 `
 const SearchBarInput = styled.input`
-    width: 350px;
+    width: 100%;
     height: 40px;
     border-radius: 28.5px;
     border: 0;

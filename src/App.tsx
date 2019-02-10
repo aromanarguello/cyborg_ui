@@ -38,7 +38,6 @@ const App: SFC<any> = () => (
                         <div>
                             <Navbar />
                             <StaticExpansionPanel />
-                            {/* <SidePanel /> */}
                             <Route path="/inicio" component={Home} />
                             <Route
                                 path="/cotizacion"
