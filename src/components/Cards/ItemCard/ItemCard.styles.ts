@@ -12,7 +12,7 @@ type IconProp = {
 }
 
 const Card: any = styled.div`
-    width: 400px;
+    width: 100%;
     height: 55px;
     margin: 5px 10px;
     border-radius: 16.5px;

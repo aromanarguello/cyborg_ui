@@ -8,12 +8,13 @@ const {
 } = colors
 
 const Card = styled.div`
+    align-self: flex-start;
     border-radius: 16.5px;
     width: 400px;
     height: 250px;
     grid-row-start: 1;
     grid-column-start: 2;
-    margin: 0 auto;
+    margin: 30px auto;
     box-shadow: ${light};
     background: #ffffff;
     display: flex;
